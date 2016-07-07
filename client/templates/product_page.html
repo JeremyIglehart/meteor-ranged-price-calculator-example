@@ -1,0 +1,11 @@
+<template name="productPage">
+  <h1>{{name}}</h1>
+  <h4>{{commaNumber quantity}}</h4>
+  <ul>
+    {{#each price}}
+      <li>{{moneyNumber price}}: {{min}} - {{max}}</li>
+    {{/each}}
+  </ul>
+  <input type="text" id="quantity" name="quantity" placeholder="How many would you like?">
+  <h4>Cost: {{moneyNumber overallCost}}</h4>
+</template>
