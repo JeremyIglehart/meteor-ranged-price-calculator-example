@@ -22,7 +22,7 @@ Meteor.Spinner.options = {
 };
 
 Template.registerHelper('commaNumber', function(number) {
-  return parseInt(number).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return numeral(number).format('0,0');
 });
 
 Template.registerHelper('moneyNumber', function(number) {
